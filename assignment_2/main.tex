@@ -1,0 +1,161 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+\usepackage{multicol}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+% Marks the beginning of the document
+\begin{document}
+\bibliographystyle{IEEEtran}
+\vspace{3cm}
+
+\title{Assignment 2}
+\author{EE24BTECH11002 - Agamjot Singh}
+\maketitle
+\newpage
+\bigskip
+
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+
+\begin{enumerate}
+    \setcounter{enumi}{19}
+
+    %Question20
+    \item Let $a,b,c$ be such that $b(a+c)\neq0$ if
+
+    		$\begin{vmatrix}
+			a & a+1 & a-1\\
+			b & b+1 & b-1\\
+			c & c-1 & c+1\\
+		\end{vmatrix}
+		+
+    		\begin{vmatrix}
+			a+1 & b+1 & c-1\\
+			a-1 & b-1 & c+1\\
+			\brak{-1}^{n+2}a & \brak{-1}^{n+1}b & \brak{-1}^{n}c\\
+		\end{vmatrix}
+		= 0$,
+		then the value of n is:
+
+	\begin{enumerate}[label={(\alph*)}]
+            \begin{multicols}{2}
+                \item any even integer
+                \columnbreak
+		\item any odd integer 
+            \end{multicols}
+
+            \begin{multicols}{2}
+		\item any integer 
+                \columnbreak
+		\item zero 
+            \end{multicols}
+	\end{enumerate}
+
+    %Question21
+    \item The number of $3\times3$ non-singular matrices with four entries as 1 and all othe entries as 0, is 
+	\begin{enumerate}[label={(\alph*)}]
+            \begin{multicols}{2}
+                \item $5$ 
+                \columnbreak
+		\item $6$
+            \end{multicols}
+
+            \begin{multicols}{2}
+		\item atleast $7$
+                \columnbreak
+		\item less than $4$ 
+            \end{multicols}
+	\end{enumerate}
+
+    %Question22
+    \item Let $A$ be a $2\times2$ matrix with non-zero entries and let $A^2 = I$, where $I$ is $2\times2$ identity matrix. Define 
+	\newline
+	Tr($A$) - sum of diagonal elements of $A$ and
+	\newline
+	$|A|$ - determinant of matrix $A$.
+	\newline
+	\textbf{Statement - 1:} Tr($A$) $= 0$.
+	\newline
+	\textbf{Statement - 2:} $|A|$ $= 1$
+
+	\begin{enumerate}[label={(\alph*)}]
+		\item Statement - 1 is true, Statement - 2 is true; Statement - 2 is \textbf{not} a correct explanation for Statement-1. 
+	    	\item Statement - 1 is true, Statement - 2 is false. 
+	    	\item Statement - 1 is false, Statement - 2 is true.
+	    	\item Statement - 1 is true, Statement - 2 is true; Statement - 2 is a correct explanation for Statement-1. 
+	\end{enumerate}
+
+    %Question23
+    \item Consider the system of linear equations; 
+	\begin{align*}
+		x_1 + 2x_2 + x_3 = 3\\
+		2x_1 + 3x_2 + x_3 = 3\\
+		3x_1 + 5x_2 + 2x_3 = 1
+	\end{align*}
+	\begin{enumerate}[label={(\alph*)}]
+		\item exactly $3$ solutions
+	    	\item a unique solution
+	    	\item no solution
+	    	\item infinite number of solutions
+	\end{enumerate}
+
+    %Question24
+    \item The number of values of k for which the linear equations $4x + ky + 2z = 0$, $kx + 4y + z = 0$ and $2x + 2y + z=0$ posses a non zero solution is 
+	\hfill{\brak{2011}}
+        \begin{enumerate}[label={(\alph*)}]
+            \begin{multicols}{4}
+                \item $2$
+                \columnbreak
+                \item $1$
+                \columnbreak
+                \item zero
+                \columnbreak
+                \item $3$
+            \end{multicols}
+        \end{enumerate}
+
+\end{enumerate}
+\end{document}
