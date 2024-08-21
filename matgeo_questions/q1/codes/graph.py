@@ -14,7 +14,7 @@ from conics.funcs import circ_gen
 A = np.array(([1,3])).reshape(-1,1) 
 B = np.array(([-1,2])).reshape(-1,1) 
 C = np.array(([2,5])).reshape(-1,1) 
-D = np.array(([2,4])).reshape(-1,1) 
+D = np.array(([4,6])).reshape(-1,1) 
 
 #Direction Matrices
 M1= np.block([[B-A,C-D]])
@@ -56,13 +56,18 @@ x_BC = line_gen(B,C)
 x_CD = line_gen(C,D)
 x_DA = line_gen(D,A)
 
-
+k1 = -4
+k2 = 6
+n = np.array(([0, 1])).reshape(-1,1) 
+c = 4
+x_ref = line_norm(n,c,k1,k2)
 
 #Plotting all lines
 plt.plot(x_AB[0,:],x_AB[1,:],label='$AB$')
 plt.plot(x_BC[0,:],x_BC[1,:],label='$BC$')
 plt.plot(x_CD[0,:],x_CD[1,:],label='$CD$')
 plt.plot(x_DA[0,:],x_DA[1,:],label='$DA$')
+plt.plot(x_ref[0,:],x_ref[1,:], label="$(0 \quad 1)\mathbf{x} = 4$")
 
 #Labeling the coordinates
 tri_coords = np.block([[A,B,C,D]])

@@ -25,7 +25,6 @@
 \usepackage[breaklinks=true]{hyperref}
 \usepackage{tkz-euclide} 
 \usepackage{listings}
-% \usepackage{gvv}                                        
 \def\inputGnumericTable{}                                 
 \usepackage[latin1]{inputenc}                                
 \usepackage{color}                                            
@@ -58,46 +57,20 @@
 If $\vec{A}\brak{1,3}$, $\vec{B}\brak{-1,2}$, $\vec{C}\brak{2,5}$ and $\vec{D}\brak{x,4}$ are the vertices of a parallelogram $ABCD$, then the value of x is
 \newline
 \textbf{Solution:}
-By definition of parallelogram, we say that the line $\vec{AD}$ is parallel to the line $\vec{BC}$. 
-Therefore, the slopes of these lines must be equal.
-\newline
-
-The direction vector of $\vec{PQ}$ is defined as
-\begin{align*}
-	\vec{m} = \vec{Q} - \vec{P} = k\myvec{1\\m}
-\end{align*}
-
-where $m$ is the slope of $\vec{PQ}$. We also say that
-\begin{align*}
-	\vec{m}\equiv\myvec{1\\m}
-\end{align*}
-
-Direction vector of $\vec{m} = \vec{BC}$ is given as
+Let $\vec{D}$ be some $\myvec{x\\y}$.
+By parallelogram law of addition, 
 \begin{align}
-	\vec{m}  &= \vec{C} - \vec{B}\\
-	\vec{m}  &= \myvec{2\\5}  - \myvec{-1\\2}
-		 = \myvec{3\\3}\\
-	\vec{m}  &\equiv \myvec{1\\1}\\
-	       m &= 1	
+	\vec{BA} + \vec{BC} &= \vec{BD}\\
+	\vec{BA} &= \vec{A} - \vec{B} = \myvec{1\\3} - \myvec{-1\\2} = \myvec{2\\1}\\
+	\vec{BC} &= \vec{C} - \vec{B} = \myvec{2\\5} - \myvec{-1\\2} = \myvec{3\\3}\\
+	\vec{BD} &= \vec{D} - \vec{B} = \myvec{x\\y} - \myvec{-1\\2} = \myvec{x+1\\y-2}\\
+	\text{By equation (1), you get}\\
+	\myvec{x+1\\y-2} &= \myvec{2\\1} + \myvec{3\\3} = \myvec{5\\4}\\
+	x &= 4, y = 6
 \end{align}
 
-So, the slope of $\vec{BC}$ is $1$, which is equal to the slope of $\vec{AD}$.
-\newline
-Direction vector of $\vec{m_1} = \vec{AD}$ is given as
-\begin{align}
-	\vec{m_1} &= \vec{D} - \vec{A}\\
-	\vec{m_1} &= \myvec{x\\4} - \myvec{1\\3}
-		   = \myvec{x-1\\1}\\
-	\vec{m_1} &\equiv \myvec{1\\\frac{1}{x-1}}
-\end{align}
+By equation $\brak{7}$, we can see that no such $\vec{D}$ in the form $\myvec{x\\4}$ exists.
 
-By equation $\brak{7}$, we get the slope of $\vec{AD}$ is $\frac{1}{x-1}$.
-\newline
-By equation $\brak{4}$, we get
-\begin{align}
-	\frac{1}{x - 1} &= 1\\
-	x &= 2
-\end{align}
 
 \begin{figure}[h!]
    \centering
@@ -105,8 +78,5 @@ By equation $\brak{4}$, we get
    \caption{Quadrilateral ABCD formed with given equations}
    \label{label}
 \end{figure}
-
-As we can see in the graph, the given quadrilateral formed with $x$ found in equation $\brak{9}$ is not a parallelogram.
-Therefore, we conclude that there is no $x$ for which $ABCD$ is a parallelogram.
 
 \end{document}
