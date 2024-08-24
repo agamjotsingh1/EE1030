@@ -16,12 +16,12 @@ A = np.array(([1, 2])).reshape(-1,1)
 B = np.array(([7, 0])).reshape(-1,1) 
 
 #Line parameters
-n = np.array(([3, 1])).reshape(-1,1) 
-c = 8
+n = np.array(([1, 3])).reshape(-1,1) 
+c = 7
 
 #Generating Lines
-k1 = -3
-k2 = 3
+k1 = -10
+k2 = 5
 x_C = line_norm(n,c,k1,k2)
 
 #Plotting all lines
