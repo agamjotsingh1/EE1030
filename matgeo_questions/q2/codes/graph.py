@@ -12,8 +12,9 @@ from triangle.funcs import *
 from conics.funcs import circ_gen
 
 #Given Points
-A = np.array(([1, 2])).reshape(-1,1) 
-B = np.array(([7, 0])).reshape(-1,1) 
+data = np.loadtxt("plot.txt", delimiter=" ") 
+A = np.array((data[0])).reshape(-1,1) 
+B = np.array((data[1])).reshape(-1,1) 
 
 #Line parameters
 n = np.array(([1, 3])).reshape(-1,1) 
