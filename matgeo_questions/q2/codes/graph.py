@@ -5,6 +5,16 @@ import mpmath as mp
 import numpy.linalg as LA
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import ctypes
+
+# ctypes defining structures and argument + return types
+class points(ctypes.Structure):
+    _fields_ = [('A', (ctypes.c_int * 2)), ('B', (ctypes.c_int * 2))]
+
+ptr = ctypes.CDLL('./points.so')
+ptr.get.argtypes = None
+ptr.get.restype = points
+pts = np.ctypeslib.as_array(ptr.get()).tolist()
 
 #local imports
 from line.funcs import *
@@ -12,9 +22,8 @@ from triangle.funcs import *
 from conics.funcs import circ_gen
 
 #Given Points
-data = np.loadtxt("plot.txt", delimiter=" ") 
-A = np.array((data[0])).reshape(-1,1) 
-B = np.array((data[1])).reshape(-1,1) 
+A = pts[0].reshape(-1,1) 
+B = pts[1].reshape(-1,1) 
 
 #Line parameters
 n = np.array(([1, 3])).reshape(-1,1) 
