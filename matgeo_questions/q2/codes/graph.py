@@ -7,14 +7,16 @@ import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import ctypes
 
-# ctypes defining structures and argument + return types
-class points(ctypes.Structure):
-    _fields_ = [('A', (ctypes.c_int * 2)), ('B', (ctypes.c_int * 2))]
+#dll linking
+dll = ctypes.CDLL('./points.so')
 
-ptr = ctypes.CDLL('./points.so')
-ptr.get.argtypes = None
-ptr.get.restype = points
-pts = np.ctypeslib.as_array(ptr.get()).tolist()
+dll.pointsGet.argtypes = None
+dll.pointsGet.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
+
+n = 1000 #no of points to plot for given line
+dll.lineGet.argtypes = [ctypes.c_int] + [ctypes.c_float] * 5
+dll.lineGet.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
+pts = dll.pointsGet() 
 
 #local imports
 from line.funcs import *
@@ -22,20 +24,26 @@ from triangle.funcs import *
 from conics.funcs import circ_gen
 
 #Given Points
-A = pts[0].reshape(-1,1) 
-B = pts[1].reshape(-1,1) 
+A = np.array([[pts[0][0], pts[0][1]]]).reshape(-1,1) 
+B = np.array([[pts[1][0], pts[1][1]]]).reshape(-1,1) 
 
 #Line parameters
-n = np.array(([1, 3])).reshape(-1,1) 
-c = 7
+x1 = -2.5
+x2 = 10
+a = 1
+b = 3
+c = -7
 
 #Generating Lines
-k1 = -10
-k2 = 5
-x_C = line_norm(n,c,k1,k2)
+line_pts = dll.lineGet(n, x1, x2, a, b, c)
 
 #Plotting all lines
-plt.plot(x_C[0,:],x_C[1,:],label='$(3 ~ 1)\mathbf{x}=8$')
+coords = []
+for pt in line_pts[:n]:
+    coords.append(np.array([[pt[0], pt[1]]]).reshape(-1, 1))
+
+coords = np.block(coords)
+plt.scatter(coords[0,:], coords[1,:], marker=".")
 
 #Labeling the coordinates
 tri_coords = np.block([A, B])
@@ -47,6 +55,10 @@ for i, txt in enumerate(vert_labels):
                  textcoords="offset points", # how to position the text
                  xytext=(-10,-5), # distance from text to points (x,y)
                  ha='center') # horizontal alignment can be left, right or center
+
+
+dll.free_multi_memory(line_pts, n)
+dll.free_multi_memory(pts, 2)
 
 # use set_position
 ax = plt.gca()
