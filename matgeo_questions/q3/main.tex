@@ -58,8 +58,20 @@ The value of $m$ which makes the points $\brak{0, 0}$, $\brak{2m, -4}$, and $\br
 \newline
 \textbf{Solution:}
 \newline
-Let the points be $\vec{A}\brak{0, 0} \text{,} \vec{B}\brak{3, 6} \text{ and } \vec{C}\brak{2m, -4}$.
+The points $\vec{A}$, $\vec{B}$ and $\vec{C}$ are collinear if
+\begin{align}
+	\brak{\vec{AB}} &= k\brak{\vec{AC}}\\
+	\brak{\vec{B} - \vec{A}} &= k\brak{\vec{C} - \vec{A}}\\
+	\brak{\vec{B} - \vec{A}} - k\brak{\vec{C} - \vec{A}} &= 0
+\end{align}
+Collinearity matrix is given by
+\begin{align}
+	\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top 
+\end{align}
+Equation (3) is basically doing row reduction on the collinearity matrix given in equation (4), and if the rank of the matrix is 1, we find some real $k$ that satisfies equation (3).
+\newline
 
+Let the points be $\vec{A}\brak{0, 0} \text{,} \vec{B}\brak{3, 6} \text{ and } \vec{C}\brak{2m, -4}$.
 The collinearity matrix is given by
 \begin{align}
 	\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top = \myvec{3 & 6 \\ 2m & -4}\\ 
