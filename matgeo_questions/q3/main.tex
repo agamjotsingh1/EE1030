@@ -68,11 +68,18 @@ Collinearity matrix is given by
 \begin{align}
 	\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top 
 \end{align}
-Equation (3) is basically doing row reduction on the collinearity matrix given in equation (4), and if the rank of the matrix is 1, we find some real $k$ that satisfies equation (3).
+For the vectors $\vec{AB}$ and $\vec{AC}$ to be linearly related, i.e. the points to be collinear, row reduction on collinearity matrix should result in nullity of the matrix to be one.
 \newline
-
+Let the collinearity matrix be $\vec{X}_{m\times n}$.
+By rank nullity theorem,
+\begin{align}
+	rank\brak{\vec{X}} + nullity\brak{\vec{X}} = n\\
+	rank\brak{\vec{X}} = n - nullity\brak{\vec{X}}\\
+	rank\brak{\vec{X}} = n - 1
+\end{align}
+\newline
 Let the points be $\vec{A}\brak{0, 0} \text{,} \vec{B}\brak{3, 6} \text{ and } \vec{C}\brak{2m, -4}$.
-The collinearity matrix is given by
+The collinearity matrix $\vec{X}_{2\times 2}$ is given by
 \begin{align}
 	\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top = \myvec{3 & 6 \\ 2m & -4}\\ 
 													   &\xrightarrow{R_1 = \frac{R_1}{2}} \myvec{1 & 2\\2m & -4}
