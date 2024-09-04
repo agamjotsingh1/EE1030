@@ -64,15 +64,12 @@ The points $\vec{A}$, $\vec{B}$ and $\vec{C}$ are collinear if
 	\brak{\vec{B} - \vec{A}} &= k\brak{\vec{C} - \vec{A}}\\
 	\brak{\vec{B} - \vec{A}} - k\brak{\vec{C} - \vec{A}} &= 0
 \end{align}
-Collinearity matrix is given by
+Collinearity matrix $\vec{X}_{m\times n}$ is given by
 \begin{align}
-	\myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top 
+	\vec{X} = \myvec{\vec{B} - \vec{A} & \vec{C} - \vec{A}}^\top 
 \end{align}
-For the vectors $\vec{AB}$ and $\vec{AC}$ to be linearly related, i.e. the points to be collinear, there exists a $k$ which satisfies equation $\brak{4}$.
+Row reduction on collinearity matrix should result in nullity of the matrix to be one, which implies that there is some $k$ which satisfies equation $\brak{4}$.
 \newline
-Row reduction on collinearity matrix should result in nullity of the matrix to be one, such that some $k$ exists.
-\newline
-Let the collinearity matrix be $\vec{X}_{m\times n}$.
 By rank nullity theorem,
 \begin{align}
 	\text{rank}\brak{\vec{X}} + \text{nullity}\brak{\vec{X}} = n\\
