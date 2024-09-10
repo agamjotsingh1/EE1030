@@ -15,8 +15,8 @@ dll.pointsGet.argtypes = None
 dll.pointsGet.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
 
 n = 1000 #no of points to plot for given line
-dll.circleGet.argtypes = [ctypes.c_int] + [ctypes.c_float] * 3
-dll.circleGet.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
+dll.normPlot.argtypes = [ctypes.c_int]*2 + [ctypes.c_float] * 3
+dll.normPlot.restype = ctypes.POINTER(ctypes.POINTER(ctypes.c_float))
 pts = dll.pointsGet() 
 
 #local imports
@@ -34,16 +34,20 @@ x = A[0]
 y = A[1]
 r = 2 * math.sqrt(5)
 
-#Generating Lines
-circle_pts = dll.circleGet(n, x, y, r)
+for p in (1, 2, 3):
+    #Generating norm plot 
+    norm_pts = dll.normPlot(n, p, x, y, r)
 
-#Plotting the circle
-coords = []
-for pt in circle_pts[:n]:
-    coords.append(np.array([[pt[0], pt[1]]]).reshape(-1, 1))
+    #Plotting the circle
+    coords = []
+    for pt in norm_pts[:n]:
+        coords.append(np.array([[x + pt[0], y + pt[1]]]).reshape(-1, 1))
+        coords.append(np.array([[x - pt[0], y + pt[1]]]).reshape(-1, 1))
+        coords.append(np.array([[x + pt[0], y - pt[1]]]).reshape(-1, 1))
+        coords.append(np.array([[x - pt[0], y - pt[1]]]).reshape(-1, 1))
 
-coords = np.block(coords)
-plt.scatter(coords[0,:], coords[1,:], marker=".")
+    coords = np.block(coords)
+    scatter = plt.scatter(coords[0,:], coords[1,:], marker=".", label=f"p = {p}")
 
 #Labeling the coordinates
 tri_coords = np.block([A, B1, B2])
@@ -57,7 +61,7 @@ for i, txt in enumerate(vert_labels):
                  ha='center') # horizontal alignment can be left, right or center
 
 
-dll.free_multi_memory(circle_pts, n)
+dll.free_multi_memory(norm_pts, n)
 dll.free_multi_memory(pts, 2)
 
 # use set_position

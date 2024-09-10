@@ -59,29 +59,33 @@ Find the points on $X$ axis which are at a distance of $2\sqrt{5}$ from the poin
 \newline
 Let $\vec{A}$ $\myvec{7\\-4}$ and $\vec{B} \myvec{x\\y}$ be the desired point on the $X$ axis.
 \newline
+The $L_p$ norm, written as $\norm{x}_p$, is defined as
+\begin{align}
+	\norm{x}_p = \sqrt[p]{\sum_{i=1}^{n}\abs{x_i}^p}, p\geq 1
+\end{align}
 If $\vec{B}$ is at a distance of $2\sqrt{5}$ from point $\vec{A}$.
 \begin{align}
-	\norm{\vec{B} - \vec{A}} &= 2\sqrt{5}\\
-	\implies \norm{\vec{B} - \vec{A}}^2 &= \brak{2\sqrt{5}}^2\\
-	\implies \norm{\vec{B}}^2 - 2\vec{B}^\top \vec{A} + \norm{\vec{A}}^2 &= 20\\
-	x^2 + y^2 - 2\myvec{x&y}\myvec{7\\-4} + 65 &= 20\\
-	x^2 + y^2 - 2\brak{7x - 4y} + 45 &= 0\\
-	x^2 + y^2 - 14x + 8y + 45 &= 0\\
-	\brak{x-7}^2 + \brak{y+4}^2 &= 20
+	\norm{\vec{B} - \vec{A}}_p &= 2\sqrt{5}\\
+	\implies \sqrt[p]{\abs{x - 7}^p + \abs{y + 4}^p} &= 2\sqrt{5}\\
 \end{align}
-By equation \brak{7}, we can say that locus of $\vec{B}$ is a circle with centre at $\vec{A}\myvec{7\\-4}$ and radius $2\sqrt{5}$ units.
-\newline
-As $\vec{B}$ lies on the $X$ axis, $y = 0$.
+Taking $y = 0$, as $\vec{B}$ lies on the $X$ axis.
+\begin{align}
+	\sqrt[p]{\abs{x - 7}^p + \abs{4}^p} &= 2\sqrt{5}\\
+	\abs{x - 7}^p + \brak{4}^p &= \brak{2\sqrt{5}}^p\\
+	\abs{x - 7} &= \sqrt[p]{\brak{2\sqrt{5}}^p - \brak{4}^p}\\
+	x &= 7 \pm \sqrt[p]{\brak{2\sqrt{5}}^p - \brak{4}^p}
+\end{align}
+
 By solving equation \brak{7} with $y = 0$, we get,
 \begin{align}
-	\vec{B} = \myvec{9\\0} or \myvec{5\\0}
+	\vec{B} = \myvec{7 \pm \sqrt[p]{\brak{2\sqrt{5}}^p - \brak{4}^p}\\0}, p \geq 1 
 \end{align} 
-There are two such points.
+There are infinitely many such points as $p$ varies from $1$ to $\inf$.
 
 \begin{figure}[h!]
    \centering
    \includegraphics[width=0.7\linewidth]{figs/graph.png}
-   \caption{Circle representing the locus of $\vec{B}$}
+   \caption{Graph representing the locus of $\vec{B}$, taking $p = 1, 2, 3$}
 \end{figure}
 
 \end{document}
