@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "../../c_code/funcs.h"
 
 float **pointsGet(){
     float **pts = (float **) malloc(sizeof(float *) * 3); 
@@ -21,25 +22,4 @@ float **pointsGet(){
     pts[2][2] = 0; 
 
     return pts; 
-}
-
-float **lineFromPts(int n, float x1, float y1, float z1, float x2, float y2, float z2) {
-    float **pts = (float **) malloc(sizeof(float *) * n); 
-
-    for(int i = 0; i < n; i++){
-        pts[i] = (float *) malloc(sizeof(float) * 3);
-        pts[i][0] = x1 + ((x2 - x1)*i)/n; 
-        pts[i][1] = y1 + ((y2 - y1)*i)/n; 
-        pts[i][2] = z1 + ((z2 - z1)*i)/n; 
-    }
-
-    return pts;
-}
-
-void free_multi_memory(float **arr, int n){
-    for (int i = 0; i < n; i++){
-        free(arr[i]);
-    }
-
-    free(arr);
 }
