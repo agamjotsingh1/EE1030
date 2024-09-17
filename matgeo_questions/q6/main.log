@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.3)  16 SEP 2024 19:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.8.3)  18 SEP 2024 01:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1928,31 +1928,39 @@ LaTeX Font Info:    Trying to load font information for TS1+txr on input line 5
 
 (/usr/share/texlive/texmf-dist/tex/latex/txfonts/ts1txr.fd
 File: ts1txr.fd 2000/12/15 v3.1
-)
+) (./tables/table.tex)
 <figs/graph.png, id=31, 462.528pt x 346.896pt>
 File: figs/graph.png Graphic file (type png)
 <use figs/graph.png>
-Package pdftex.def Info: figs/graph.png  used on input line 76.
+Package pdftex.def Info: figs/graph.png  used on input line 82.
 (pdftex.def)             Requested size: 254.9356pt x 191.20625pt.
- [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf
--dist/fonts/enc/dvips/base/8r.enc}
 
- <./figs/graph.png>] (./main.aux)
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-
+dist/fonts/enc/dvips/base/8r.enc}
+
+] [2 <./figs/graph.png>] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 52992 strings out of 474222
- 1256189 string characters out of 5748734
- 2007133 words of memory out of 5000000
- 74408 multiletter control sequences out of 15000+600000
+ 53007 strings out of 474222
+ 1256484 string characters out of 5748734
+ 2009132 words of memory out of 5000000
+ 74418 multiletter control sequences out of 15000+600000
  622225 words of font info for 168 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 109i,18n,109p,1194b,893s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 109i,18n,109p,1194b,894s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/txfonts/rtxmi.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/share/texlive/te
@@ -1960,10 +1968,10 @@ xmf-dist/fonts/type1/public/txfonts/txex.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/txfonts/txsy.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (1 page, 69363 bytes).
+Output written on main.pdf (2 pages, 72071 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
- 8 named destinations out of 1000 (max. 500000)
+ 97 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
+ 10 named destinations out of 1000 (max. 500000)
  114 words of extra memory for PDF output out of 10000 (max. 10000000)
 
