@@ -3,6 +3,8 @@
 #include <math.h>
 #include "funcs.h"
 
+#define PI 3.14159265358979323846 
+
 float **lineFromPts3D(int n, float x1, float y1, float z1, float x2, float y2, float z2) {
     float **pts = (float **) malloc(sizeof(float *) * n); 
 
@@ -38,6 +40,18 @@ float **lineGet(int n, float x1, float x2, float a, float b, float c) {
         pts[i][1] = -(c + a*pts[i][0])/b; 
     }
 
+    return pts;
+}
+
+float **circleGet(int n, float x, float y, float r) {
+    float **pts = (float **) malloc(sizeof(float *) * n); 
+    float theta = 0;
+    for(int i = 0; i < n; i++){
+        pts[i] = (float *) malloc(sizeof(float) * 2 * n);
+        pts[i][0] = x + r*cos(theta);
+        pts[i][1] = y + r*sin(theta);
+        theta += 2*PI/n;
+    }
     return pts;
 }
 
