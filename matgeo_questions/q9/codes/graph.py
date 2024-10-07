@@ -48,7 +48,7 @@ circle_pts = dll.circleGet(n, x, y, r)
 line_pts = dll.lineGet(n, k1, k2, a, b, c)
 
 #Shading the region
-plt.fill_between([sub[0] for sub in circle_pts[:int(n/2)]], [sub[1] for sub in circle_pts[:int(n/2)]], [0]*int(n/2), color="orange")
+plt.fill_between([sub[0] for sub in circle_pts[:int(n/2)]], [sub[1] for sub in circle_pts[:int(n/2)]], [0]*int(n/2), color="orange", label="D")
 
 #Plotting the circle
 coords = []

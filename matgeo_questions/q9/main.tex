@@ -79,15 +79,19 @@ The parameters of the circle are
 \begin{align}
 	\vec{u} = \myvec{0\\0}, f = -4 \implies r = 2, \vec{O} = \myvec{0\\0}
 \end{align}
-The area between the curve and $x$-axis can be given by
+Boundary of $D$ is the semicircle of radius $r$, which we can parameterize \brak{\text{in counter clock-wise orientation}} using
 \begin{align}
-	A &= \int_{-2}^{2} \sqrt{4 - x^2} \, dx\\
-	\text{Substituting } x = 2\sin{\theta} \text{,}\\
-	A &= \int_{\frac{-\pi}{2}}^{\frac{\pi}{2}} 4\cos^2{\theta} \, d\theta\\
-	A &= 8\int_{0}^{\frac{\pi}{2}} \cos^2{\theta} \, d\theta\\
-	A &= 8\int_{0}^{\frac{\pi}{2}} \sin^2{\theta} \, d\theta\\
-	\implies 2A &= 8\brak{\frac{\pi}{2}}\\
-	\implies A &= 2\pi
+	\myvec{x\\y} = \myvec{r\cos{t}\\r\sin{t}}, 0\geq t \leq \pi
+\end{align}
+
+By Green's Theorem,
+\begin{align}
+	\text{area of D}  = A &= \int \int \, dA\\
+	&= \frac{1}{2} \int_{C} x\, dy - y\, dx\\
+	&= \frac{1}{2} \int_{0}^{\pi} r^2\brak{\cos^2{t} + \sin^2{t}} \, dt\\
+	&= \frac{r^2}{2} \int_{0}^{\pi} \, dt\\
+	&= \frac{\pi r^2}{2}\\
+	&= 2\pi
 \end{align}
 
 \begin{figure}[h!]
