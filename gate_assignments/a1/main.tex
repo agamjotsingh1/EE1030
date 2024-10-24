@@ -298,7 +298,8 @@
 	\end{tikzpicture}
 	\end{center}
 	\begin{enumerate}
-		\item
+		\item 
+		\begin{center}
 		\begin{tikzpicture}
 			\draw (0, 0) -- (10, 0);
 			\draw (0, 0) -- (5, -1) -- (5, 1) -- (10, 0);
@@ -309,7 +310,42 @@
 			\draw [Triangle-Triangle, thick] (12, 0) -- (12, -1);
 			\node at (12, -0.5) [right] {\Large $\frac{M}{2L}$};
 		\end{tikzpicture}
+		\end{center}
+		\item
+		\begin{center}
+		\begin{tikzpicture}
+			\draw (0, 0) -- (10, 0);
+			\draw (0, 0) -- (0, -1) -- (5, -1) -- (5, 1) -- (10, 1) -- (10, 0);
+
+			\draw [Triangle-Triangle, thick] (12, 0) -- (12, 1);
+			\node at (12, 0.5) [right] {\Large $\frac{M}{2L}$};
+
+			\draw [Triangle-Triangle, thick] (12, 0) -- (12, -1);
+			\node at (12, -0.5) [right] {\Large $\frac{M}{2L}$};
+		\end{tikzpicture}
+		\end{center}
+		\item
+		\begin{center}
+		\begin{tikzpicture}
+			\draw (0, 0) -- (0, 2) -- (10, 2) -- (10, 0) -- cycle;
+
+			\draw [Triangle-Triangle, thick] (12, 0) -- (12, 2);
+			\node at (12, 1) [right] {\Large $\frac{M}{L}$};
+		\end{tikzpicture}
+		\end{center}
+		\item
+		\begin{center}
+		\begin{tikzpicture}
+			\draw (0, 0) -- (0, 1) -- (10, 1) -- (10, 0) -- cycle;
+
+			\draw [Triangle-Triangle, thick] (12, 0) -- (12, 1);
+			\node at (12, 0.5) [right] {\Large $\frac{M}{2L}$};
+		\end{tikzpicture}
+		\end{center}
 	\end{enumerate}
+
+	%Question67
+	\item An idealized thin-walled cross-section of a beam and the respective areas of the booms are shown. A bending moment $M_y$ is acting on the cross-section. The ratio of the magnitude of normal stress in the top booms to that of the bottom boom is
 
 \end{enumerate}
 \end{document}
