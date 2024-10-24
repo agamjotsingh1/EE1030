@@ -52,7 +52,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{JEE Main 2021 March 16 Shift 2}
+\title{AE 2008 Q52-68}
 \author{EE24BTECH11002 - Agamjot Singh}
 \maketitle
 
@@ -235,7 +235,7 @@
 
 	\begin{table}[h!]
 		\centering
-		\input{tables/q23.tex}
+		\input{tables/table.tex}
 		\label{taba1.q64}
 	\end{table}
 
@@ -346,6 +346,62 @@
 
 	%Question67
 	\item An idealized thin-walled cross-section of a beam and the respective areas of the booms are shown. A bending moment $M_y$ is acting on the cross-section. The ratio of the magnitude of normal stress in the top booms to that of the bottom boom is
+	\begin{center}
+	\begin{tikzpicture}
+		\filldraw (0,0) circle[radius=0.25cm];
+		\draw (0, -2) -- (0, 2);
+		\filldraw (0,-2) circle[radius=0.5cm];
+		\filldraw (0,2) circle[radius=0.25cm];
+		\draw (-2, 2) -- (2, 2);
+		\filldraw (2,2) circle[radius=0.5cm];
+		\filldraw (-2,2) circle[radius=0.5cm];
+
+		\draw [-Triangle] (0.5, 0) -- (3, 0);
+		\node at (3, 0) [right] {\Large $y$};
+
+		\draw [-Triangle] (0, 3) -- (0, 5.5);
+		\node at (0, 5.5) [above] {\Large $z$};
+
+		\draw [Triangle-Triangle, thick] (-4, 0) -- (-4, 2);
+		\node at (-4, 1) [left] {\Large $2$ cm};
+
+		\draw [Triangle-Triangle, thick] (-4, 0) -- (-4, -2);
+		\node at (-4, -1) [left] {\Large $2$ cm};
+
+		\draw [Triangle-Triangle, thick] (-2, 4) -- (0, 4);
+		\node at (-1, 4) [above] {\Large $1$ cm};
+
+		\draw [Triangle-Triangle, thick] (0, 4) -- (2, 4);
+		\node at (1, 4) [above] {\Large $1$ cm};
+
+		\node at (0, 0) [left=3mm] {\Large $o$};
+		\node at (1.5, -1) [right] {\Large $M_y$};
+
+		\draw [-Triangle, thick] (1, 1) arc (60:-60:1);
+
+		\node at (7, 1) [right] {\Large Area $= 0.2 \text{cm}^2$};
+		\filldraw (6,1) circle[radius=0.5cm];
+
+		\node at (7, -1) [right] {\Large Area $= 0.1 \text{cm}^2$};
+		\filldraw (6, -1) circle[radius=0.25cm];
+		
+	\end{tikzpicture}
+	\end{center}
+	\begin{enumerate}
+		\item $\frac{5}{11}$
+		\item $\frac{2}{5}$
+		\item $1$
+		\item $\frac{5}{2}$
+	\end{enumerate}
+
+	%Question68
+	\item An engineer is asked to test a system which can be idealized as SDOF \brak{\text{single degree of freedom}} with viscous damping. A frequency response test was conducted and it is found that the quality factor $Q$ is equal to $10$. What will be the logarithmic decrement if a free vibration test is performed?
+	\begin{enumerate}
+		\item $\frac{\pi}{40}$
+		\item $\frac{\pi}{20}$
+		\item $\frac{\pi}{10}$
+		\item $\frac{\pi}{5}$
+	\end{enumerate}
 
 \end{enumerate}
 \end{document}
