@@ -32,6 +32,7 @@
 \usepackage{array}
 \usepackage{float}
 \usepackage{tikz}
+\usepackage{circuitikz}
 \usetikzlibrary{arrows.meta}
 
 \newtheorem{theorem}{Theorem}[section]
@@ -52,7 +53,7 @@
 \bibliographystyle{IEEEtran}
 \vspace{3cm}
 
-\title{CE 2013 Q40-52}
+\title{EE 2015 Q27-39}
 \author{EE24BTECH11002 - Agamjot Singh}
 \maketitle
 
@@ -60,193 +61,352 @@
 \renewcommand{\thetable}{\theenumi}
 
 \begin{enumerate}
-    %Question40
-    \item A normal depth in a wide rectangular channel is increased by $10\%$. The percentage increase in the discharge in the channel is:
-
-	\begin{enumerate}
-		\item $20.1$
-		\item $15.4$
-		\item $10.5$
-		\item $17.2$
-	\end{enumerate}
-
-    %Question41
-    \item The transplantation of rice requires 10 days and total depth of water required during transplantation is $48$ cm. During transplantation, there is an effective rainfall $\brak{\text{useful for irrigation}}$ of $8$ cm. The duty of irrigation water $\brak{\text{in hectares/cumec}}$ is
-
-	\begin{enumerate}
-		\item $612$
-		\item $216$
-		\item $300$
-		\item $108$
-	\end{enumerate}
-
-    %Question42
-    \item A settling tank in a water treatment plant is designed for a surface overflow rate of $30 \frac{m^3}{day\cdot m^2}$. Assume specific gravity of sediment particles $= 2.65$, density of water $\brak{\rho} = 1000 kg/m^3$, dyanmic viscosity of water $\brak{\mu} = 0.001 N\cdot s/m^2$, and Stoke's law is valid. The approximate minimum size of particles that would be completely removed is:
-
-	\begin{enumerate}
-		\item $0.01$ mm
-		\item $0.02$ mm
-		\item $0.03$ mm
-		\item $0.04$ mm
-	\end{enumerate}
-
-
-    %Question43
-    \item A student began experiment for determination of $5$-day, $20\degree C$ BOD on Monday. Since the $5^{\text{th}}$ day fell on Saturday, the final DO readings were taken on next Monday. On calculation, BOD $\brak{\text{i.e.} 7 \text{ day, } 20\degree \text{ C}}$ was found to be $150$ mg/L. What would be the $5$-day, $20\degree$ C BOD $\brak{\text{ in mg/L}}$? Assume value of BOD rate constant $\brak{k}$ at standard temperature of $20\degree$C as $0.23$/day $\brak{\text{base } e}$. $\rule{1cm}{0.15mm}$ 
-
-    %Question44
-    \item Elevation and temperature data for a place are tabulated below:
-	\begin{table}[h!]
-		\centering
-		\input{tables/table1.tex}
-		\label{taba1.q44}
-	\end{table}
-	Based on the above data, lapse rate can be referred as:
-
-	\begin{enumerate}
-		\item Super-adiabatic
-		\item Neutral
-		\item Sub-adiabatic
-		\item Inversion
-	\end{enumerate}
-
-    %Question45
-    \item The percent voids in mineral aggregate $\brak{\text{VMA}}$ and percent air voids $\brak{V_v}$ in a compacted cylindrical bituminous mix speciment are $15$ and $4.5$ respectively. The percent voids filled with bitumen $\brak{\text{VFB}}$ for this specimen is:
-	\begin{enumerate}
-		\item $24$
-		\item $30$
-		\item $54$
-		\item $70$
-	\end{enumerate}
-
-
-    %Question46
-    \item Following bearings are observed while traversing with a compass.
-	\begin{table}[h!]
-		\centering
-		\input{tables/table2.tex}
-		\label{taba1.q46}
-	\end{table}
-	After applying the correction due to local attraction, the corrected fore bearing of line BC will be
-
-	\begin{enumerate}
-		\item $48\degree 15^{\prime}$
-		\item $50\degree 15^{\prime}$
-		\item $49\degree 45^{\prime}$
-		\item $48\degree 45^{\prime}$
-	\end{enumerate}
-
-    %Question47
-    \item A theodolite is set up at station A and a $3$ m long staff is held vertically at station B. The depression
-angle reading at $2.5$ m marking on the staffis $6\degree 10^{\prime}$. The horizontal distance between A and B is
-$2200$ m. Height of instrument at station A is $1.1$ m and R.L. of A is $880.88$ m. Apply the curvature
-and refraction correction, and determine the R.L. of B $\brak{\text{in m}}$. $\rule{1cm}{0.15mm}$ 
-
-	\subsection{Common Data Questions} \label{cdq:48-49}
-	$\textbf{Common Data for Questions 48 and 49}$
+    %Question27
+    \item Base load power plants are
 	\newline
-    A propped cantilever made of a prismatic steel beam is subjected to a concentrated load $P$ at mid span as shown.
+	P: wind farms
+	\newline
+	Q: run-of-river plants
+	\newline
+	R: nuclear power plants
+	\newline
+	S: diesel power plants
+	\hfill{\brak{\text{2015 - EE}}}
+
+	\begin{enumerate}
+		\item P, Q and S only
+		\item P, R and S only
+		\item P, Q and R only
+		\item Q and R only
+	\end{enumerate}
+
+    %Question28
+    \item The voltages developed across the $3\ohm$ and $2\ohm$ resistors shown in the figure are $6$ V and $2$ V respectively, with the polarity as marked. What is the power $\brak{\text{in Watt}}$ delivered by the $5$ V voltage source?
 	\begin{center}
-	\begin{tikzpicture}
+		\begin{circuitikz}
 		\tikzstyle{every node}=[font=\large]
+		\draw  (5.5,7.75) circle (1.75cm);
+		\draw  (13.25,7.75) circle (1.75cm);
+		\draw (7.25,7.75) to[short] (8.25,7.75);
+		\draw (10.75,7.75) to[short] (11.5,7.75);
+		\draw (7,6.75) to[short] (8.5,5.25);
+		\draw (11.75,6.75) to[short] (10.25,5.25);
+		\draw (7,8.75) to[short] (8.25,10);
+		\draw (10.5,10) to[short] (11.75,8.75);
+		\draw (8.25,7.75) to[R] (10.75,7.75);
+		\draw (8.25,10) to[R] (10.5,10);
+		\draw (10.25,5.25) to[american voltage source] (8.5,5.25);
+		\node [font=\large] at (9.5,8.25) {2$\Omega$};
+		\node [font=\large] at (9.25,9.5) {3$\Omega$};
+		\node [font=\large] at (8.5,10.5) {-};
+		\node [font=\large] at (10,10.5) {+};
+		\node [font=\large] at (9.25,10.5) {6 V};
+		\node [font=\large] at (9.5,4.5) {5 V};
+		\node [font=\large] at (5.5,7.75) {Network N1};
+		\node [font=\large] at (13.25,7.75) {Network N2};
+		\node [font=\large] at (9.5,7.25) {2 V};
+		\node [font=\large] at (10.25,7.25) {+};
+		\node [font=\large] at (8.75,7.25) {-};
+		\end{circuitikz}
+	\end{center}
+	\hfill{\brak{\text{2015 - EE}}}
 
-		\draw (3,10.75) to (3,9.5);
-		\draw (3,10.75) to (2.5,10.25);
-		\draw (3,10.25) to (2.5,9.75);
-		\draw (3,9.75) to (2.5,9.25);
-		\draw (3,10.25) to (11.75,10.25);
-		\draw (11.25,9.75) to (11.75,10.25);
-		\draw (11.75,10.25) to (12.25,9.75);
-		\draw (11.25,9.75) to (12.25,9.75);
-		\draw  (12,9.5) circle (0.25cm);
-		\draw  (11.5,9.5) circle (0.25cm);
-		\draw [->, >=Stealth] (11.75,10) -- (11.75,9);
-		\draw [->, >=Stealth] (7,11.5) -- (7,10.25);
-		\node [font=\large] at (7,11.75) {P};
-		\node [font=\large] at (11.75,8.5) {R};
-		\draw (11.25,9.25) to (12.25,9.25);
-		\draw [<->, >=Stealth] (3,8.5) -- (7,8.5);
-		\draw [<->, >=Stealth] (7,8.5) -- (11.5,8.5);
-		\node [font=\large] at (5,7.75) {1.5m};
-		\node [font=\large] at (9.25,7.75) {1.5m};
+	\begin{enumerate}
+		\item $5$
+		\item $7$
+		\item $10$
+		\item $14$
+	\end{enumerate}
 
-	\end{tikzpicture}
+    %Question29
+    \item For the given circuit, the Thevenin equivalent is to be determined. The Thevenin voltage, $V_{th}\brak{\text{ in Volt}}$, seen from terminal AB is \rule{1cm}{0.15mm}
+	\begin{center}
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\large]
+		\draw (4.75,9) to[short] (6,9);
+		\draw (6,9) to[R] (7,9);
+		\draw (7,9) to[short] (7.5,9);
+		\draw (7.5,9) to[short] (7.5,8.25);
+		\draw (7.5,8.25) to[R] (7.5,7.25);
+		\draw (4.75,9) to[short] (4.75,8.25);
+		\draw (7.5,7.25) to[short] (7.5,6.5);
+		\draw (7.5,6.5) to[short] (4.75,6.5);
+		\draw (4.75,6.5) to[short] (4.75,7.25);
+		\draw (4.75,8.25) to[battery1] (4.75,7.25);
+		\draw (9.75,9) to[american controlled voltage source] (7.5,9);
+		\draw (9.75,9) to[R] (9.75,6.5);
+		\draw (7.5,6.5) to[short] (10.75,6.5);
+		\node [font=\large] at (8.75,9.75) {20i};
+		\node [font=\large] at (6.5,9.5) {1$\Omega$};
+		\node [font=\large] at (7,7.75) {1$\Omega$};
+		\node [font=\large] at (4,7.75) {2 V};
+		\node [font=\large] at (4.5,8) {+};
+		\node [font=\large] at (4.5,7.5) {-};
+		\node [font=\large] at (10.25,7.75) {2$\Omega$};
+		\draw [->, >=Stealth] (7.75,7.25) -- (7.75,6.75);
+		\node [font=\large] at (8,7) {i};
+		\draw (9.75,9) to[short] (10.75,9);
+		\node [font=\large] at (10.75,9.25) {A};
+		\node [font=\large] at (11,6.5) {B};
+		\end{circuitikz}
+	\end{center}
+	\hfill{\brak{\text{2015 - EE}}}
+
+    %Question30
+    \item An inductor is connected in parallel with a capacitor as shown in the figure
+	\begin{center}
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\large]
+		\draw (4.75,8.25) to[short] (6.75,8.25);
+		\draw (10,8.25) to[short] (12,8.25);
+		\draw (6.75,9) to[short] (6.75,7.25);
+		\draw (10,9) to[short] (10,7.25);
+		\draw (6.75,9) to[L ] (10,9);
+		\draw (6.75,7.25) to[C] (10,7.25);
+		\draw [dashed] (5.75,9.75) -- (5.75,6.25);
+		\draw [dashed] (5.75,6.25) -- (10.75,6.25);
+		\draw [dashed] (10.75,6.25) -- (10.75,10.25);
+		\draw [dashed] (10.75,10.25) -- (5.75,10.25);
+		\draw [dashed] (5.75,10) -- (5.75,10.25);
+		\draw [->, >=Stealth] (4.75,8.25) -- (5.5,8.25);
+		\node [font=\large] at (5.25,7.75) {i};
+		\node [font=\large] at (7.75,8.5) {L};
+		\node [font=\large] at (8.75,7.75) {C};
+		\node [font=\large] at (11,6.5) {Z};
+		\end{circuitikz}
 	\end{center}
 
-	%Question48
-	\item If load $P$ = $80$ kN, find the reaction $R \brak{\text{in kN}} \brak{\text{correct to } 1 \text{-decimal place}}$ using elastic analysis. $\rule{1cm}{0.15mm}$ 
+	As the frequency of current $i$ is increased, the impedance $\brak{Z}$ of the network varies as
+	\hfill{\brak{\text{2015 - EE}}}
 
-	%Question49
-	\item If the magnitude of load $P$ is increased till collapse and the plastic moment carrying capacity of steel beam section is $90$ kNm, determine reaction $R \brak{\text{in kN}} \brak{\text{correct to } 1 \text{-decimal place}}$ using plastic analysis. $\rule{1cm}{0.15mm}$ 
-
-	$\textbf{Common Data for Questions 50 and 51}$
-	\newline
-
-	For a portion of national highway where a descending gradient of $1$ in $25$ meets with an ascending gradient of $1$ in $20$, a valley curve needs to be designed for a vehicle travelling at $90$ kmph based on the following conditions.
 	\begin{enumerate}
-		\item headlight sight distance equal to the stopping sight distance $\brak{\text{SSD}}$ of a level terrain
-considering length of valley curve > SSD. 
-		\item comfort condition with allow ablerate of change of centrifugal acceleration = $0.5$ m/$\text{sec}^3$.
+		\item
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw (5.25,10) to[short] (5.25,5.5);
+		\draw (5.25,7.75) to[short] (11.5,7.75);
+		\draw [->, >=Stealth] (5,8.25) -- (5,9.5);
+		\draw [->, >=Stealth] (10.25,7.5) -- (11.5,7.5);
+		\node [font=\large] at (4.5,8.25) {Z};
+		\node [font=\large] at (11.25,7) {f};
+		\draw [dashed] (7.75,10) -- (7.75,5.25);
+		\draw [short] (5.5,7.5) .. controls (7,7.5) and (7.5,7.5) .. (7.5,5.5);
+		\draw [short] (8,10) .. controls (8.25,7.75) and (8.25,8.25) .. (10.25,8);
+		\node [font=\normalsize] at (6.5,6) {Capacitive};
+		\node [font=\normalsize] at (9.25,9) {Inductive};
+		\end{circuitikz}
+
+		\item		
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw (5.25,10) to[short] (5.25,5.5);
+		\draw (5.25,7.75) to[short] (11.5,7.75);
+		\draw [->, >=Stealth] (5,8.25) -- (5,9.5);
+		\draw [->, >=Stealth] (10.25,7.5) -- (11.5,7.5);
+		\node [font=\large] at (4.5,8.25) {Z};
+		\node [font=\large] at (11.25,7) {f};
+		\draw [dashed] (7.75,10) -- (7.75,5.25);
+		\node [font=\normalsize] at (9.25,6.25) {Capacitive};
+		\node [font=\normalsize] at (6.5,9) {Inductive};
+		\draw [short] (5.5,8) .. controls (7.75,8.25) and (7.5,8.5) .. (7.5,10);
+		\draw [short] (8,5.5) .. controls (8,7.5) and (8.25,7.75) .. (10,7.5);
+		\end{circuitikz}
+
+		\item 
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw (5.25,7.75) to[short] (11.5,7.75);
+		\draw [->, >=Stealth] (5,8.25) -- (5,9.5);
+		\draw [->, >=Stealth] (10.25,7.5) -- (11.5,7.5);
+		\node [font=\large] at (4.5,8.25) {Z};
+		\node [font=\large] at (11.25,7) {f};
+		\node [font=\normalsize] at (10,9.25) {Capacitive};
+		\node [font=\normalsize] at (6.5,9.25) {Inductive};
+		\draw (5.25,10.25) to[short] (5.25,7.25);
+		\draw [short] (8,10) .. controls (8.25,10.25) and (8.5,10) .. (8.5,10);
+		\draw [short] (6,8.25) .. controls (7.75,8.75) and (7.5,9.25) .. (8,10);
+		\draw [short] (8.5,10) .. controls (9,9) and (8.5,8.75) .. (10.5,8.25);
+		\end{circuitikz}
+
+		\item
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw (5.25,7.75) to[short] (11.5,7.75);
+		\draw [->, >=Stealth] (5,8.25) -- (5,9.5);
+		\draw [->, >=Stealth] (10.25,7.5) -- (11.5,7.5);
+		\node [font=\large] at (4.5,8.25) {Z};
+		\node [font=\large] at (11.25,7) {f};
+		\node [font=\normalsize] at (9.75,7) {Capacitive};
+		\node [font=\normalsize] at (6.5,8.25) {Inductive};
+		\draw (5.25,6) to[short] (5.25,10);
+		\draw [short] (5.75,9) .. controls (7.5,9.25) and (7.5,8.5) .. (8,7.75);
+		\draw [short] (8,7.75) .. controls (9,6.5) and (8.75,6.5) .. (10.5,6.25);
+		\end{circuitikz}
 	\end{enumerate}
-	Assume total reaction time = $2.5$ seconds; coefficient of longitudinal friction of the pavement $= 0.35$; height
-of head light of the vehicle $= 0.75$ m; andbeam angle $= 1\degree$. 
 
-    %Question50
-    \item What is the length of valley curve $\brak{\text{in m}}$ based on the head light sight distance condition? $\rule{1cm}{0.15mm}$
+    %Question31
+    \item A seperately excited DC generator has an armature resistance of $0.1\ohm$ and negligible armature inductance. At rated field current and rated rotor speed, its open-circuit voltage is $200$ V. When this generator is operated at half the rated speed, with half the rated field current, and uncharged $1000 \mu \text{F}$ capacitor is suddenly connected across the armature terminals. Assume that the speed remains unchanged during the transient. At what time $\brak{\text{in microsecond}}$ after the capcitor is connected will the voltage across it reach $25$ V?
+	\hfill{\brak{\text{2015 - EE}}}
 
-    %Question51
-    \item What is the length of valley curve $\brak{\text{in m}}$ based on the comfort condition? $\rule{1cm}{0.15mm}$
+	\begin{enumerate}
+		\item $62.25$
+		\item $69.3$
+		\item $73.25$
+		\item $77.3$
+	\end{enumerate}
 
-	$\textbf{Common Data for Questions 52 and 53}$
-	\newline
+    %Question32
+    \item The self inductance of the primary winding of a single phase, $50$ Hz, transformer is $800$ mH, and that of the secondary winding is $600$ mH. The mutual inductance between these two windings is $480$ mH. The secondary winding of this transformer is short circuited and the primary winding is connected to a $50$ Hz, single phase, sinusoidal voltage source. The current flowing in both the windings is less than their respective rated currents. The resistance of both windings can be neglected. In this condition, what is the effective inductance $\brak{\text{in mH}}$ seen by the source
+	\hfill{\brak{\text{2015 - EE}}}
 
-	A multistory building with a basement is to be constructed. The top $4$ m consists of loose silt, below which dense sand layer is present up to a great depth. Ground water table is at the surface. The foundation consists of the basement slab of $6$ m width which will rest on the top of dense sand as shown in the figure. For dense sand, saturated unit weight = $20$ kN/$\text{m}^3$, and bearing capacity factors $N_q = 40$ and $N_{\gamma} = 45$. For loose silt, saturated unit weight = $18$ kN/$\text{m}^3$, $N_q = 15$ and $N_{\gamma} = 20$. Effective cohesion $c^{\prime}$ is zero for both soils. Unit weight of water is $10$ kN/$\text{m}^3$. Neglect shape factor and depth factor. 
-	\newline
-	Average elastic modlulus $E$ and Poisson's ratio $\mu$ of dense sand is $60 \times 10^3$ kN/$\text{m}^2$ and $0.3$ respectively.
+	\begin{enumerate}
+		\item $416$
+		\item $440$
+		\item $200$
+		\item $920$
+	\end{enumerate}
 
-    %Question52
-    \item Using factor of safety $= 3$, the net safe bearing capacity $\brak{\text{in kN/} \text{m}^2}$ of the foundation is:
+    %Question33
+    \item The primary mmf is least affected by the secondary terminal conditions in a
+	\hfill{\brak{\text{2015 - EE}}}
+
+	\begin{enumerate}
+		\item power transformer
+		\item potential transformer
+		\item current transformer
+		\item distribution transformer
+	\end{enumerate}
+
+    %Question34
+    \item A Bode magnitude plot for the transfer function $G\brak{s}$ of a plant is shown in the figure. Which one of the following transfer functions best describes the plant?
+	\begin{center}
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\large]
+		\draw [->, >=Stealth] (4.5,7) -- (4.5,10.5);
+		\draw [->, >=Stealth] (4.5,7) -- (10.5,7);
+		\draw (5,7) to[short] (7,7);
+		\draw [short] (4.5,7.75) -- (4.25,7.75);
+		\draw [short] (4.5,8.5) -- (4.25,8.5);
+		\draw [short] (4.5,9.25) -- (4.25,9.25);
+		\draw [short] (5.25,7) -- (5.25,6.75);
+		\draw [short] (6,7) -- (6,6.75);
+		\draw [short] (6.75,7) -- (6.75,6.75);
+		\draw [short] (7.5,7) -- (7.5,6.75);
+		\draw [short] (8.25,7) -- (8.25,6.75);
+		\draw [short] (9,7) -- (9,6.75);
+		\draw [short] (9.5,7) -- (9.75,7);
+		\draw [short] (9.75,7) -- (9.75,6.75);
+		\node [font=\small] at (4,9.25) {20};
+		\node [font=\small] at (4,8.5) {0};
+		\node [font=\small] at (4,7.75) {-20};
+		\node [font=\small] at (5.25,6.5) {0.1};
+		\node [font=\small] at (6,6.5) {1};
+		\node [font=\small] at (6.75,6.5) {10};
+		\node [font=\small] at (7.5,6.5) {100};
+		\node [font=\small] at (8.25,6.5) {1k};
+		\node [font=\small] at (9,6.5) {10k};
+		\node [font=\small] at (9.75,6.5) {100k};
+		\node [font=\large] at (12,6.5) {$f\brak{\text{Hz}}$};
+		\node [font=\large] at (5.5,10.75) {$20 \log\abs{G\brak{j2 \pi f}}$};
+		\draw [short] (4.5,9.25) -- (6.5,9.25);
+		\draw [short] (6.5,9.25) .. controls (7.75,9) and (7,8) .. (8.25,7.75);
+		\draw [short] (8.25,7.75) -- (10.75,7.75);
+		\end{circuitikz}
+	\end{center}
+	\hfill{\brak{\text{2015 - EE}}}
+
+		\begin{enumerate}
+			\item $\frac{1000\brak{s + 10}}{s + 1000}$
+			\item $\frac{10\brak{s + 10}}{s\brak{s + 1000}}$
+			\item $\frac{s+1000}{10s\brak{s + 10}}$
+			\item $\frac{s + 1000}{10\brak{s + 10}}$
+		\end{enumerate}
+
+	%Question35
+	\item For the signal-flow graph shown in the figure, which one of the following expressions is equal to the transfer function $\left.\frac{Y\brak{s}}{X_2\brak{s}}\right|_{X_1\brak{s} = 0}$?
 
 	\begin{center}
-	\begin{tikzpicture}
-	\tikzstyle{every node}=[font=\large]
-		\draw (8,9.75) to (11.5,9.75);
-		\draw (11.5,9.75) to (11.5,5.25);
-		\draw (11.5,5.25) to (16.25,5.25);
-		\draw (16.25,5.25) to (16.25,9.75);
-		\draw (16.25,9.75) to (19.75,9.75);
-		\draw (11,9.75) to (11,4.75);
-		\draw (11,4.75) to (16.75,4.75);
-		\draw (16.75,4.75) to (16.75,9.75);
-		\draw (8,4.75) to (19.75,4.75);
-		\draw [<->, >=Stealth] (10,9.75) -- (10,4.75)node[pos=0.5, fill=white]{4 m};
-		\draw [<->, >=Stealth] (11,4.25) -- (16.75,4.25)node[pos=0.5, fill=white]{6 m};
-		\draw [->, >=Stealth] (13.5,6) -- (13.75,5.25);
-		\node [font=\normalsize] at (13.25,6.25) {Foundation slab};
-		\node [font=\Large] at (13.75,7.25) {Basement};
-		\node [font=\Large] at (9.75,10.25) {Ground surface};
-		\node [font=\Large] at (18.25,7.75) {Loose silt};
-		\draw (17.25,10.25) to (17.75,9.75);
-		\draw (17.75,9.75) to (18.25,10.25);
-		\draw (18.25,10.25) to (17.25,10.25);
-		\draw [ line width=0.7pt](19,9.75) to (19.5,9.25);
-		\draw [ line width=0.7pt](19.5,9.75) to (19,9.25);
-		\draw [ line width=0.7pt](19.5,9.75) to (20,9.25);
-		\draw [ line width=0.7pt](19.5,9.25) to (20,9.75);
-		\draw [ line width=0.7pt](8,9.75) to (8.5,9.25);
-		\draw [ line width=0.7pt](8,9.25) to (8.5,9.75);
-		\draw [ line width=0.7pt](8.5,9.75) to (9,9.25);
-		\draw [ line width=0.7pt](8.5,9.25) to (9,9.75);
-		\node [font=\Large] at (8.25,8) {Loose silt};
-		\node [font=\Large] at (13.5,3) {Dense sand};
-	\end{tikzpicture}
+		\begin{circuitikz}
+		\tikzstyle{every node}=[font=\normalsize]
+		\draw [->, >=Stealth] (4.5,8.5) -- (5.75,8.5);
+		\draw [->, >=Stealth] (5.75,8.5) -- (7,8.5);
+		\draw [->, >=Stealth] (7,8.5) -- (8.25,8.5);
+		\draw [->, >=Stealth] (8.25,8.5) -- (9.5,8.5);
+		\draw [->, >=Stealth] (9.5,8.5) -- (10.75,8.5);
+		\draw [->, >=Stealth] (4.5,10) -- (4.5,8.5);
+		\draw [->, >=Stealth] (7.5,10) -- (7.5,8.5);
+		\draw [->, >=Stealth] (7.5,8.5) .. controls (7.5,7.75) and (7.25,7) .. (5.75,7) ;
+		\draw [ color={rgb,255:red,255; green,255; blue,255}, short] (4.5,8.5) -- (5.5,7);
+		\draw [short] (5.75,7) .. controls (5,7) and (4.5,7.5) .. (4.5,8.5);
+		\draw [short] (6.25,8.5) .. controls (6.25,7.5) and (6.75,7) .. (7.75,7);
+		\draw [->, >=Stealth] (9,8.5) .. controls (9,8) and (9,7) .. (7.75,7) ;
+		\node at (4.5,8.5) [circ] {};
+		\node at (7.5,8.5) [circ] {};
+		\node at (6.25,8.5) [circ] {};
+		\node at (9,8.5) [circ] {};
+		\node [font=\normalsize] at (5.75,6.75) {$-1$};
+		\node [font=\normalsize] at (7.75,6.75) {$-1$};
+		\node [font=\normalsize] at (4.5,10.25) {$X_1\brak{s}$};
+		\node [font=\normalsize] at (7.5,10.25) {$X_2\brak{s}$};
+		\node [font=\normalsize] at (5.75,8.75) {$1$};
+		\node [font=\normalsize] at (7,8.75) {$G_1$};
+		\node [font=\normalsize] at (8.25,8.75) {$G_2$};
+		\node [font=\normalsize] at (10.75,8) {$Y\brak{s}$};
+		\end{circuitikz}
 	\end{center}
+	\hfill{\brak{\text{2015 - EE}}}
 
 	\begin{enumerate}
-		\item $610$
-		\item $320$
-		\item $983$
-		\item $693$
+		\item $\frac{G_1}{1 + G_2\brak{1 + G_1}}$
+		\item $\frac{G_2}{1 + G_1\brak{1 + G_2}}$
+        \item $\frac{G_1}{1 + G_1G_2}$
+		\item $\frac{G_2}{1 + G_1G_2}$
+	\end{enumerate}
+
+	%Question36
+	\item The maximum value of "$a$" such that the matrix $\myvec{-3 & 0 & -2\\1 & -1 & 0\\0 & a & -2}$ has three linearly independent real eigenvectors is
+
+	\hfill{\brak{\text{2015 - EE}}}
+	\begin{enumerate}
+		\item $\frac{2}{3\sqrt{3}}$
+		\item $\frac{1}{3\sqrt{3}}$
+		\item $\frac{1 + 2\sqrt{3}}{3\sqrt{3}}$
+		\item $\frac{1 + \sqrt{3}}{3\sqrt{3}}$
+	\end{enumerate}
+
+    %Question37
+    \item A solution of the ordinary differential equation $\frac{d^2y}{dt^2} + 5\frac{dy}{dt} + 6y = 0$ is such that $y\brak{0} = 2$ and $y\brak{1} = -\frac{1 - 3e}{e^3}$. The value of $\frac{dy}{dt}\brak{0}$ is \rule{1cm}{0.15mm}
+	\hfill{\brak{\text{2015 - EE}}}
+
+    %Question38
+    \item The signum function is given by
+	\begin{align*}
+		\text{sgn}\brak{x} =
+		\begin{cases}
+			\frac{x}{\abs{x}} & x \neq 0\\
+			0 & x = 0
+		\end{cases}
+	\end{align*}
+
+	The Fourier series expansion of sgn$\brak{\cos{t}}$ has
+	\hfill{\brak{\text{2015 - EE}}}
+
+	\begin{enumerate}
+		\item only sine terms with all harmonics
+		\item only cosine terms with all harmonics
+		\item only sine terms with even numbered harmonics
+		\item only cosine terms with odd numbered harmonics
+	\end{enumerate}
+
+    %Question39
+    \item Two players, $A$ and $B$, alternately keep rolling a fair dice. The person to get a six first wins the game. Given that player $A$ starts the game, the probability that $A$ wins the game is
+	\hfill{\brak{\text{2015 - EE}}}
+
+	\begin{enumerate}
+		\item $\frac{5}{11}$
+		\item $\frac{1}{2}$
+		\item $\frac{7}{13}$
+		\item $\frac{6}{11}$
 	\end{enumerate}
 
 \end{enumerate}

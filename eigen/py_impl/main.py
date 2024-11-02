@@ -1,7 +1,7 @@
 from matrix import *
 from funcs import *
 
-A = Matrix([[2+3j, 1-1j, 5 + 2j], [-4 + 1j, 3 + 0j, 3 - 5j], [3 - 10j, 4 + 9j, -1 + 8j]])
+A = Matrix([[0 + 0j, 1-1j, 0], [1 + 1j, 0 + 0j, 1 - 1j], [0 + 0j, 1 + 1j, 0 + 0j]])
 n = 20
 tol = 10e-3
 
