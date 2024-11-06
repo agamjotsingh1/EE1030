@@ -165,7 +165,7 @@ In this case, to find the area of the region $D$, we substitute $L = -\frac{y}{2
 By Green's Theorem $\brak{\ref{eq:greens_theorem}}$,
 \begin{align}
 	\text{area of D}  = A &= \int \int \, dA\\
-	&= \frac{1}{2} \int_{C} x\, dy - y\, dx\\
+	&= \frac{1}{2} \oint_{C} x\, dy - y\, dx\\
 	&= \frac{1}{2} \int_{0}^{\pi} r^2\brak{\cos^2{t} + \sin^2{t}} \, dt\\
 	&= \frac{r^2}{2} \int_{0}^{\pi} \, dt\\
 	&= \frac{\pi r^2}{2}\\
@@ -199,7 +199,7 @@ float **circleGet(int n, float x, float y, float r) {
     float **pts = (float **) malloc(sizeof(float *) * n); 
     float theta = 0;
     for(int i = 0; i < n; i++){
-        pts[i] = (float *) malloc(sizeof(float) * 2 * n);
+        pts[i] = (float *) malloc(sizeof(float) * 2);
         pts[i][0] = x + r*cos(theta);
         pts[i][1] = y + r*sin(theta);
         theta += 2*PI/n;
