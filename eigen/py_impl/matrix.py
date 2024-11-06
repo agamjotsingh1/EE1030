@@ -80,25 +80,10 @@ class Matrix:
 
         for i in range(self.size[0]):
             for j in range(self.size[1]):
-                mat[j, i] = self[i, j]
+                mat[j, i] = self[i, j].conjugate()
 
         return mat
         
     def norm(self):
-        inprod = self.T@Matrix([[x[0].conjugate()] for x in self.mat])
+        inprod = self.T@self
         return sqrt(inprod)
-'''
-A = Matrix([[1,3],[7,5], [8,9]])
-B = Matrix([[1,0],[0,1]])
-
-A[:, 1] = [2, 3, 4]
-
-print(A)
-
-#mat = A.mat
-
-#mat[:][1] = [2, 3, 4]
-#print(mat)
-#print(2*A/4)
-#print(A.T)
-'''
