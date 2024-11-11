@@ -26,7 +26,7 @@ compl** mzeroes(int m, int n){
         mat[i] = (compl*) malloc(sizeof(compl)*n);
 
         for(int j = 0; j < n; j++){
-            mat[i][j] = 0;
+            mat[i][j] = 0 + 0*I;
         }
     }
     return mat;
@@ -70,26 +70,23 @@ compl** mT(compl** mat, int m, int n){
         newmat[i] = (compl*) malloc(sizeof(compl)*m);
 
         for(int j = 0; j < m; j++){
-            newmat[i][j] = mat[j][i];
+            newmat[i][j] = conj(mat[j][i]);
         }
     }
     return newmat;
 }
 
-compl** mmul(compl** mat1, compl** mat2, int m, int n, int k){
-    compl** newmat = (compl**) malloc(sizeof(compl)*m);
-    for(int i = 0; i < m; i++){
-        newmat[i] = (compl*) malloc(sizeof(compl)*k);
-    
-        for(int j = 0; j < k; j++){
-            compl sum = 0 + 0*I;
-            for(int a = 0; a < n; a++) {
-                sum += mat1[i][a]*mat2[a][j];
-            }
+compl** mmul(compl** mat1, compl** mat2, int m, int n, int r){
+    compl** newmat = mzeroes(m , r);
 
-            newmat[i][j] = sum;
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < r; j++){
+            for(int k = 0; k < n; k++) {
+                newmat[i][j] += mat1[i][k]*mat2[k][j];
+            }
         }
     }
+
     return newmat;
 }
 
@@ -128,10 +125,16 @@ compl** vconj(compl** v, int m){
 }
 
 double vnorm(compl** vec, int m){
-    compl** norm = mmul(mT(vec, m, 1), vconj(vec, m), 1, m, 1);
+    compl** norm = mmul(mT(vec, m, 1), vec, 1, m, 1);
 
     return sqrt(creal(norm[0][0]));
 } 
+
+compl** e(int m, int i){
+    compl** mat = mzeroes(m, 1);
+    mat[i-1][0] = 1;
+    return mat;
+}
 
 compl*** QR(compl** A, int m, int n){
     compl** Q = mzeroes(m, n);
